@@ -1,48 +1,32 @@
-.container {
-  background-color: brown;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  flex-direction: row;
-}
-
-.text {
-  color: wheat;
-  flex-basis: auto;
-  text-align: left;
-  margin-left: 50px;
-}
-
-.cart {
+button {
   background-color: rgb(74, 24, 24);
   color: wheat;
   margin-right: 150px;
-}
-
-.parent {
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   width: 300px;
   border-radius: 45px;
+  border: none;
 }
+
 .child-icon {
   justify-content: center;
   align-items: center;
   font-size: larger;
+  display: flex;
 }
 .child-text {
   align-self: center;
-
   margin: 15px 40px 15px 5px;
-
-  height: 30px;
+  display: flex;
+  height: 40px;
   max-width: 150px;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .counter {
@@ -55,13 +39,4 @@
   height: 30px;
   width: 50px;
   display: flex;
-}
-
-.photo-box{
-  height:150px ;
-  background-color: rgb(78, 78, 78);
-}
-.photo {
-  height: 150px;
-  width: 307px;
 }

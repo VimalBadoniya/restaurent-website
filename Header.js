@@ -1,24 +1,26 @@
-import React from "react";
-import { HiShoppingCart } from "react-icons/hi";
+import React, { Fragment } from "react";
+import Meals from "./Meals";
 import "./Header.css";
-
-const Header = () => {
+import image from "../../assets/1317087.jpg";
+import HeaderButton from "./HeaderButton";
+import Summary from "./Summary";
+const Header = (props) => {
   return (
-    <div className="container">
-      <div className="heading-text">
-        <h1 className="heading-text">React Meals</h1>
+    <Fragment>
+      <header className="container">
+        <h1 className="text">React Meals</h1>
+        <HeaderButton />
+      </header>
+      <div className="photo-box">
+        <img src={image} alt="Delicious Food!" className="photo"></img>
+        <img src={image} alt="Delicious Food!" className="photo"></img>
+        <img src={image} alt="Delicious Food!" className="photo"></img>
+        <img src={image} alt="Delicious Food!" className="photo"></img>
+        <img src={image} alt="Delicious Food!" className="photo"></img>
+        <Summary></Summary>
+        <Meals></Meals>
       </div>
-
-      <div>
-        <div>
-          <HiShoppingCart />
-          <h3>Your Cart</h3>
-        </div>
-        <div>
-          <h4>0</h4>
-        </div>
-      </div>
-    </div>
+    </Fragment>
   );
 };
 
