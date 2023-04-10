@@ -8,7 +8,7 @@ const Header = (props) => {
   return (
     <Fragment>
       <header className="container">
-        <h1 className="text">React Meals</h1>
+        <h1 className="text">Punjabi Meals</h1>
         <HeaderButton />
       </header>
       <div className="photo-box">

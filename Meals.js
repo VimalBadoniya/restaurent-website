@@ -1,20 +1,23 @@
 import React from "react";
+import "./Meals.css"
 
 const dummy_data = [
-    { id : "A1" , name : "Hot Coffee" , price : 100 },
-    { id : "A2" , name : "Cold Coffee" , price : 150 },
-    { id : "A3" , name : "Lemon Ice Tea" , price : 170 },
-    { id : "A4" , name : "Ginger Tea" , price : 110 },
+    { id : "A1" , name : "Dal Makhni" , price : 100 , description : "Made with urad dal and other pulses and includes butter and cream" },
+    { id : "A2" , name : "Chole Bhature" , price : 150 , description : "Chole rfers to the curry and Bhatura is crispy and fried bread" },
+    { id : "A3" , name : "Sarso Da Saag" , price : 170 , description : "Dish of mustard greens cooked with spices" },
+    { id : "A4" , name : "Butter Chicken" , price : 110 , description : "Chicken with spiced tomato and butter sauce"},
 ]
 
 const Meals = ()=>{
     let data = dummy_data.map((row)=>{
-        return(<li>
-            {row.name}
+        return(<li key={row.id}>
+            <h3>{row.name}</h3>
+            <p>{row.description}</p>
+            <h3 className="price">₹{row.price}</h3>
         </li>)
     })
     return(
-        <section>
+        <section className="menu"> 
             <ul>
                 {data}
             </ul>
