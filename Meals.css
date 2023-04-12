@@ -1,6 +1,6 @@
 .menu{
     background-color: beige;
-    max-width: 800px;
+   max-width: 50%;
     border-radius: 10px;
     margin: auto;
     padding: 10px;
@@ -8,4 +8,26 @@
 
 .price{
     color: rgb(205, 44, 44);
+}
+
+.li-grid{
+display: flex;
+
+margin: 10px;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid black;
+
+}
+.left{
+    
+    width: max-content;
+    
+}
+
+.right{
+   
+    width: max-content;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,0 +1,22 @@
+.background{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.75);
+     
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-box{
+    background-color: aliceblue;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    border-radius: 12px;
+}

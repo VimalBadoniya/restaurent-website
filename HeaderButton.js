@@ -2,9 +2,18 @@ import React from "react";
 import "./HeaderButton.css";
 import { HiShoppingCart } from "react-icons/hi";
 
-const HeaderButton = () => {
+
+
+const HeaderButton = (props) => {
+  
+  
+  const clickHandler = ()=>{
+    props.onclick()
+
+  }
+
   return (
-    <button onClick={()=>{console.log("cart clicked")}} >
+    <button className="cart-button" onClick={clickHandler} >
       <span>
         <HiShoppingCart className="child-icon" />
       </span>
