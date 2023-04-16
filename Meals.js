@@ -1,38 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Meals.css";
 import QuantityForm from "./QuantityForm";
-
-const dummy_data = [
-  {
-    id: "A1",
-    name: "Dal Makhni",
-    price: 100,
-    description:
-      "Made with urad dal and other pulses and includes butter and cream",
-  },
-  {
-    id: "A2",
-    name: "Chole Bhature",
-    price: 150,
-    description:
-      "Chole rfers to the curry and Bhatura is crispy and fried bread",
-  },
-  {
-    id: "A3",
-    name: "Sarso Da Saag",
-    price: 170,
-    description: "Dish of mustard greens cooked with spices",
-  },
-  {
-    id: "A4",
-    name: "Butter Chicken",
-    price: 110,
-    description: "Chicken with spiced tomato and butter sauce",
-  },
-];
+import dummyDataContext from "../../source/dummy-data-context";
 
 const Meals = () => {
-  let data = dummy_data.map((row) => {
+  let ctx = useContext(dummyDataContext);
+  //console.log(ctx)
+  let data = ctx.items.map((row) => {
     return (
       <li key={row.id} className="li-grid">
         <div className="left">
@@ -41,7 +15,11 @@ const Meals = () => {
           <h3 className="price">₹{row.price}</h3>
         </div>
         <div className="right">
-          <QuantityForm></QuantityForm>
+          <QuantityForm
+            name={row.name}
+            price={row.price}
+            id={row.id}
+          ></QuantityForm>
         </div>
       </li>
     );

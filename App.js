@@ -1,7 +1,8 @@
-import React, { Fragment , useState } from "react";
+import React, {  useState } from "react";
 import Header from "./components/UI/Header";
 import "./App.css";
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./source/CartProvider";
 
 
 function App() {
@@ -14,10 +15,10 @@ function App() {
     setCart(false)
   }
   return (
-    <Fragment>
+    <CartProvider>
       <Header onclick={cartHandler}/>
       {isCart && <Cart onclose={closeHandler}></Cart>}
-    </Fragment>
+    </CartProvider>
   );
 }
 

@@ -14,9 +14,11 @@
 .overlay-box{
     background-color: aliceblue;
     border: 2px solid black;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
     width: 500px;
-    height: auto;
+    max-height: 400px;
     border-radius: 12px;
+    
 }
